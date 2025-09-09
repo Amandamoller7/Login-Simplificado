@@ -35,7 +35,7 @@ $dados = $mysqli->query("SELECT * FROM jogadores WHERE id=$id")->fetch_assoc();
             <label for="time_id" class="form-label">Time</label>
             <select name="time_id" class="form-select">
                 <?php
-                $result = $conn->query("SELECT id, nome FROM times");
+                $result = $mysqli->query("SELECT id, nome FROM times");
                 while($row = $result->fetch_assoc()) {
                     $selected = $row['id'] == $dados['time_id'] ? "selected" : "";
                     echo "<option value='{$row['id']}' $selected>{$row['nome']}</option>";
@@ -66,7 +66,7 @@ if (isset($_POST['atualizar'])) {
         header("Location: read.php");
         exit;
     } else {
-        echo "<div class='alert alert-danger mt-3'>Erro: " . $mysqli->error . "</div>";
+        echo "<div class='alert alert-danger mt-3'>Erro: " . $mysqly->error . "</div>";
     }
 }
 ?>

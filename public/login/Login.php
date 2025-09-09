@@ -1,5 +1,7 @@
 <?php
 // login.php
+include('../../includes/db.php');
+include('../../includes/header.php'); 
 
 // 1) Conexão
 $mysqli = new mysqli("localhost", "root", "", "login_db");

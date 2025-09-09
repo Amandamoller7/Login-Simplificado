@@ -8,7 +8,7 @@ $sql = "DELETE FROM jogadores WHERE id=$id";
 if ($mysqli->query($sql)) {
     echo "Jogador excluído!";
 } else {
-    echo "Erro: " . $msqli->error;
+    echo "Erro: " . $mysqli->error;
 }
 ?>
 <a href="read.php">Voltar para lista</a>

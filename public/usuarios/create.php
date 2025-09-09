@@ -61,7 +61,7 @@ if (isset($_POST['salvar'])) {
         header("Location: read.php");
         exit;
     } else {
-        echo "<div class='alert alert-danger mt-3'>Erro: " . $msqli->error . "</div>";
+        echo "<div class='alert alert-danger mt-3'>Erro: " . $mysqli->error . "</div>";
     }
 }
 ?>
